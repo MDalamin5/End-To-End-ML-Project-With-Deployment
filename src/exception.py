@@ -1,5 +1,9 @@
 import sys
-import logging
+import os
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.logger import logging
+
 
 def error_message_detail(error, error_detail:sys):
     _,_,exc_tb=error_detail.exc_info()  # its store all info about the exception like where and why occur this exception.
